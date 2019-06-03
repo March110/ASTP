@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+              
+<validators> 
+     <field name ="testEnv.ProductName"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Product Name: required </message> 
+         </field-validator> 
+     </field> 
+     <field name ="testEnv.Firmware"> 
+         <field-validator type ="requiredstring">
+             <param name="trim">true</param>
+             <message>Firmware: required </message> 
+         </field-validator> 
+     </field> 
+     <field name ="testEnv.Hardware"> 
+         <field-validator type ="requiredstring"> 
+             <param name="trim">true</param>
+             <message>Hardware: required </message> 
+         </field-validator> 
+     </field>
+     <field name ="testEnv.OS"> 
+         <field-validator type ="requiredstring">
+             <param name="trim">true</param>
+             <message>OS: required </message> 
+         </field-validator> 
+     </field>
+     <field name ="testEnv.NetworkType"> 
+         <field-validator type ="requiredstring">
+             <param name="trim">true</param>
+             <message>Network Type: required </message> 
+         </field-validator> 
+     </field>
+     <field name ="testEnv.ProtocolType"> 
+         <field-validator type ="requiredstring">
+             <param name="trim">true</param>
+             <message>Protocol Type: required </message> 
+         </field-validator> 
+     </field>
+     <field name ="testEnv.IPv4Address"> 
+     	 <field-validator type ="requiredstring">
+     	     <param name="trim">true</param>
+             <message>IPv4 Address: required </message> 
+         </field-validator> 
+         <field-validator type ="ipv4">
+             <param name="trim">true</param>
+             <message>IPv4 Address: Wrong Format[xx.xx.xx.xx] </message> 
+         </field-validator> 
+     </field>
+     <field name ="testEnv.IPv4Port">     
+         <field-validator type ="requiredstring"> 
+         	<param name="trim">true</param>
+            <message>IPv4 Port: required </message> 
+         </field-validator>
+         <field-validator type="regex">
+         	<param name="regex">\d{1,3}</param>
+         	<message><![CDATA[ IPv4 Port: 1-999 ]]></message>
+         </field-validator>
+         <!-- field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">10</param>
+			<message><![CDATA[ IPv4 Port: 1-10 ]]></message>
+		</field-validator -->
+     </field>
+</validators> 

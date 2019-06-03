@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+        version="2.0">        
+
+   <tlib-version>1.0</tlib-version>
+   <short-name>pagerTag</short-name>
+   <uri>/pagerTag</uri>   
+   
+   <tag>
+		<name>pages</name>
+		<tag-class>com.beyondsoft.astp.common.tag.PageTag</tag-class>
+		<body-content>jsp</body-content>
+		<description>分页标签</description>
+		<attribute>
+			<name>pageNo</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>total</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>styleClass</name>
+			<rtexprvalue>true</rtexprvalue>
+			<description>分页标签的样式,不配置此项将采用默认的样式</description>
+		</attribute>
+		<attribute>
+			<name>theme</name>
+			<rtexprvalue>true</rtexprvalue>
+			<description>分页的主题，现支持number|text两种主题</description>
+		</attribute>
+		<attribute>
+			<name>url</name>
+			<rtexprvalue>true</rtexprvalue>
+			<description>分页提交的路径，默认不用配置该项，自动获取系统访问路径。</description>
+		</attribute>
+		<attribute>
+			<name>urlType</name>
+			<rtexprvalue>true</rtexprvalue>
+			<description>url的类型，现在支持两种url类型，第一种默认的url，这种情况不需要设置；第二种情况是目录型的url，比如http://blog.csdn.net/yongtree，此种情况请配置成dir。此种情况不支持动态查询，故标签体中不能加入参数</description>
+		</attribute>
+	</tag>
+   
+</taglib>

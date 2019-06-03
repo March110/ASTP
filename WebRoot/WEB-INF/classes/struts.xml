@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+	 
+    <package name="default" namespace="/" extends="struts-default,json-default">
+                
+        <action name="testenv" class="com.beyondsoft.astp.actions.TestEnvAction">
+        	<result name="input" type="">/testenv_add.jsp</result>
+            <result name="success" type="">/testenv_list.jsp</result>
+            <result name="toAdd" type="">/testenv_add.jsp</result>
+            <result name="toEdit" type="">/testenv_add.jsp</result>
+        </action>
+        
+        <action name="testcase" class="com.beyondsoft.astp.actions.TestCaseAction">
+        	<result name="input" type="">/testcase_edit.jsp</result>
+            <result name="success" type="">/testcase_list.jsp</result>
+            <result name="toManage" type="">/testcase_management.jsp</result>
+            <result name="toEdit" type="">/testcase_edit.jsp</result>
+        </action>
+        
+        <action name="testresult" class="com.beyondsoft.astp.actions.TestResultAction">
+        	<result name="success" type="">/testresult_list.jsp</result>
+        	<result name="input" type="">/testresult_list.jsp</result>
+           	<result name="addTestCase" type="">/testcase_list.jsp</result>
+           	<result name="toReview" type="">/testresult_review.jsp</result>
+           	<result name="viewTestCase" type="">/testresult_detail.jsp</result>
+           	<result name="viewTestResult" type="">/testresult_detail.jsp</result>
+        </action> 
+        
+        <action name="testdata" class="com.beyondsoft.astp.actions.TestDataAction">
+        </action>
+        
+        <action name="apiaction_*" class="com.beyondsoft.astp.actions.APIAction" method="{1}">
+            <result type="json">
+                <param name="root">dataMap</param>
+            </result>
+        </action>
+    </package>
+
+</struts>

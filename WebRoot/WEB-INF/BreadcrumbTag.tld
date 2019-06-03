@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+        version="2.0">        
+
+   <tlib-version>1.0</tlib-version>
+   <short-name>breadcrumbTag</short-name>
+   <uri>/breadcrumbTag</uri>   
+   
+   <tag>
+		<name>breadcrumbBar</name>
+		<tag-class>com.beyondsoft.astp.common.tag.BreadcrumbTag</tag-class>
+		<body-content>jsp</body-content>
+		<description>面包屑导航栏</description>				
+	</tag>
+   
+</taglib>

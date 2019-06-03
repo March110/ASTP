@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: Arial, helvetica, sans-serif;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+BODY {
+	COLOR: #000000;
+	FONT-FAMILY: "微软雅黑", "宋体";
+	SCROLLBAR-FACE-COLOR: #dddddd; MARGIN: 0px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #ffffff; SCROLLBAR-3DLIGHT-COLOR: #b8b8b8; SCROLLBAR-ARROW-COLOR: #8d8d8d; SCROLLBAR-TRACK-COLOR: #efefef; SCROLLBAR-DARKSHADOW-COLOR: #999999
+
+}
+img {
+	border: 0px;
+}
+
+input.input-btn {
+	background: url(../images/obtn.gif) no-repeat;
+	background-position: 0 0;
+	width: 60px;
+	height: 21px;
+	color: #183C94;
+	border: 0;
+}
+
+input.input-btn:hover {
+	cursor: hand;
+	background-position: 0 -21px;
+}
+
+a:link {
+	color: #057AE0;
+	text-decoration: none;
+}
+
+a:visited {
+	color:  #057AE0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #009900;
+	cursor: hand;
+}
+
+a:active {
+	color: #bbb;
+}
+#Main{padding:6px;}
+.appC{margin:0 0 2px 0;position:relative;}
+.appC .pageDate{margin-top:6px;marginfloat:left;}
+.appC .appBtns{margin-top:6px;float:right;}
+.appC .appBtns input{margin-left:3px;}
+.appC table{border:none; border-collapse:collapse;}
+.appC table td{padding:0 8px 5px 0;text-align:left;border:none;}
+.layOut{margin-left:5px;}
+#Main h1{
+	border:1px solid #afc6dd;
+    margin-bottom:6px;
+	background:#9cc8dd url(../images/article.gif) no-repeat 6px 4px;
+	height:25px;
+	line-height:25px;
+	text-indent:2em;
+	font-weight: bold;
+	color: #192d5a;
+}
+#Main h1 span{
+	font-size: 14px;
+}

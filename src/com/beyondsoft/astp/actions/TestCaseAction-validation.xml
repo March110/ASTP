@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+              
+<validators> 
+     <field name ="testCase.RequestMethod"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Request Method: required </message> 
+         </field-validator> 
+     </field>
+     <field name ="testCase.Module"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Module: required </message> 
+         </field-validator> 
+     </field>
+     <field name ="testCase.Feature"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Feature: required </message> 
+         </field-validator>
+	</field>
+	<field name ="testCase.Feature"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Feature: required </message> 
+         </field-validator>
+	</field>
+	<field name ="testCase.Function"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Function: required </message> 
+         </field-validator>
+	</field>
+	<field name ="testCase.RequestUrl"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Request Url: required </message> 
+         </field-validator>
+	</field>
+	<field name ="testCase.TestCaseStep"> 
+         <field-validator type="required">
+             <message>Test Step: required </message> 
+         </field-validator>
+         <field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">1000</param>
+			<message><![CDATA[ Test Step: must be integer min 1 max 1000 if supplied ]]></message>
+		</field-validator>
+	</field>
+	<field name ="testCase.TestCaseDesc"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Test Description: required </message> 
+         </field-validator>
+	</field>
+	<field name ="testCase.RequestData"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Request Data: required </message> 
+         </field-validator>
+	</field>
+	<field name ="testCase.ExpectResult"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Expected Result: required </message> 
+         </field-validator>
+	</field>
+	<field name ="testCase.TestType"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Test Type: required </message> 
+         </field-validator>
+	</field>
+	<field name ="testCase.TestCode"> 
+         <field-validator type ="requiredstring">
+         	 <param name="trim">true</param>
+             <message>Test Code: required </message> 
+         </field-validator>
+	</field>
+</validators> 

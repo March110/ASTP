@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>BeyondSoft Security Testing Platform</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/common_style.css" />
+		<style type="text/css">
+			html,body{height:100%;}
+			body{background:#eefbff url(images/menuBg.gif) no-repeat left bottom;}
+		</style>
+
+		<script type="text/javascript" src="javascript/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="javascript/selectItems.js"></script>
+		<script type="text/javascript">
+$(function(){
+    //控制菜单闭合
+	var flag = 0;
+	$(".pMenu").click(function() {
+		//$(".sMenus").hide();
+		var s = $(".show");
+		if(s !="undefined"){
+			s.removeClass("show");
+			s.addClass("sMenus")
+		}
+		var select = $(this).children(".sMenus");
+		select.removeClass("sMenus");
+		select.addClass("show");
+		select.toggle();
+        $(".sMenus").hide();
+	});
+	//阻止冒泡
+	$(".sMenu").click(function(event){
+		event.stopPropagation();
+	});
+	//控制menubar隐藏
+	var getBtns =  document.getElementById("LeftMenus").getElementsByTagName("a");
+	controlState(getBtns,"active");
+	var getF = parent.document.getElementsByTagName("frameset")[1];
+	var getC = document.getElementById("lefControl");
+	getC.getElementsByTagName("img")[0].style.top = parseInt(getC.offsetHeight / 2) - 24 + "px";
+	getC.onclick = function() {
+		getF.cols.indexOf("186")>-1 ? hiddenF() : showF();
+	}
+	function showF() {
+		var getCols = getF.cols.split(",");
+		getF.cols = "186,"+getCols[1]+","+getCols[2];
+		getC.getElementsByTagName("img")[0].src = "images/bar1.gif";
+		getC.getElementsByTagName("img")[0].alt="收起";
+	}
+	function hiddenF() {
+		var getCols = getF.cols.split(",");
+		getF.cols = "6,"+getCols[1]+","+getCols[2];
+		getC.getElementsByTagName("img")[0].src = "images/bar2.gif";
+		getC.getElementsByTagName("img")[0].alt="打开";
+	}
+})
+
+</script>
+	</head>
+	<body>
+		<div class="idS">
+			Identity: March Yang
+		</div>
+		<ul id="LeftMenus" height="500">
+			<div id="func1" desc="安全测试配置管理平台">
+				<li class="pMenu">
+					Security Test
+					<ul class="sMenus">
+						<li class="sMenu">
+							<a href="testenv!list.action" target="mainFrame">LEDM</a>
+						</li>
+						<li class="sMenu">
+							<a  target="workFrame">PRN</a>
+						</li>		 
+					</ul>
+				</li>
+				
+				<li class="pMenu">
+					Case Maintenance
+					<ul class="sMenus">
+						<li class="sMenu">
+							<a href="LedmCaseManagement.html" target="mainFrame">LEDM Case Management</a>
+						</li> 
+					</ul>
+				</li>
+		 
+				
+			</div>
+		</ul>
+		<div id="lefControl">
+			<img src="images/bar1.gif" alt="收起" />
+		</div>
+	</body>
+</html>

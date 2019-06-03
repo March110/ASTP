@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>BeyondSoft Security Testing Platform</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/common_style.css" />
+	</head>
+	<body>
+		<div id="Header" class="topBar">
+			<div class="logo"></div>
+			<div class="btns" >
+				<div>
+					<a href="#n" class="home" >Home</a>
+					<a href="#n" class="help" >Help</a>
+						<!--  返回到上级目录的意思 -->
+					<a href="logout.jsp" target="_parent" class="exit">Exit</a>
+				</div>
+				
+			</div>
+			<div class="state">
+				<script language="JavaScript" type="text/javascript">
+				var isnDay = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
+						"Thursday", "Friday", "Saturday", "Sunday");
+				var today = new Date();
+				var month = today.getMonth() + 1;
+				document.write("" + today.getFullYear() + "-" + month + "-"
+						+ today.getDate() + "   " + isnDay[today.getDay()])
+				</script>
+			</div>
+			<div>
+				<div class="projectName" style="text-align:center">
+					BeyondSoft  Security Testing Platform
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

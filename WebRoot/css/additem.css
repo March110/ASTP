@@ -1,0 +1,43 @@
+#divbg {
+	width: 120%;
+	height: 100%;
+	position: absolute;
+	z-index: 999;
+	top: 0px;
+	left: 0px;
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+	background-color: #4C4733;
+}
+
+#win {
+	background-color: #99B4D1;
+	width: 300px;
+	height: auto;
+	padding: 2px;
+	z-index: 1000;
+	position: absolute;
+	top:20%;
+	left: 40%;
+}
+
+#content {
+	background-color: #FFFFFF;
+	overflow: auto;
+	height: auto;
+	clear: both;
+}
+
+#title {
+	width: 250px;
+	height: 21px;
+	float: left;
+}
+
+#img {
+	float: right;
+	cursor: pointer;
+}
+.blue { background: #8DBCF8; border:1px solid #a3dae4;border-collapse:collapse; position: relative; right: -10px}
+
+

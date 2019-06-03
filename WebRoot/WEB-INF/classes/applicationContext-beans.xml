@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+ <beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"  
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"  
+    xmlns:p="http://www.springframework.org/schema/p" xmlns:util="http://www.springframework.org/schema/util"  
+    xmlns:tool="http://www.springframework.org/schema/tool" xmlns:context="http://www.springframework.org/schema/context"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+     http://www.springframework.org/schema/beans/spring-beans.xsd  
+     http://www.springframework.org/schema/tx  
+     http://www.springframework.org/schema/tx/spring-tx.xsd  
+     http://www.springframework.org/schema/aop  
+     http://www.springframework.org/schema/aop/spring-aop.xsd  
+     http://www.springframework.org/schema/jee  
+     http://www.springframework.org/schema/jee/spring-jee.xsd  
+     http://www.springframework.org/schema/context  
+     http://www.springframework.org/schema/context/spring-context.xsd  
+     http://www.springframework.org/schema/util  
+     http://www.springframework.org/schema/util/spring-util.xsd  
+     http://www.springframework.org/schema/tool  
+     http://www.springframework.org/schema/tool/spring-tool.xsd"  
+    default-lazy-init="true" default-autowire="byName" >  
+  
+  	<bean name="UserDao" class="com.beyondsoft.astp.core.dao.UserDaoImpl"/>
+  	<bean name="APIDao" class="com.beyondsoft.astp.core.dao.APIDaoImpl"/>
+  	<bean name="TestCaseDao" class="com.beyondsoft.astp.core.dao.TestCaseDaoImpl"/>
+  	<bean name="TestDataDao" class="com.beyondsoft.astp.core.dao.TestDataDaoImpl"/>
+  	<bean name="TestEnvDao" class="com.beyondsoft.astp.core.dao.TestEnvDaoImpl"/>
+  	<bean name="TestResultDao" class="com.beyondsoft.astp.core.dao.TestResultDaoImpl"/>
+  	
+  	<bean name="UserService" class="com.beyondsoft.astp.core.service.impl.UserServiceImpl"/>
+  	<bean name="APIService" class="com.beyondsoft.astp.core.service.impl.APIServiceImpl"/>  	
+  	<bean name="TestDataService" class="com.beyondsoft.astp.core.service.impl.TestDataServiceImpl"/>
+  	<bean name="TestCaseService" class="com.beyondsoft.astp.core.service.impl.TestCaseServiceImpl"/>
+  	<bean name="TestEnvService" class="com.beyondsoft.astp.core.service.impl.TestEnvServiceImpl"/>
+  	<bean name="TestResultService" class="com.beyondsoft.astp.core.service.impl.TestResultServiceImpl"/>
+      
+</beans>  
